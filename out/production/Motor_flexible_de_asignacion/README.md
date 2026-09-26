@@ -142,25 +142,9 @@ Las tres primeras pruebas permiten comprobar que los resultados funcionales del 
 
 ## Guía de Actividad Realizada
 
-- Importación y comprobación de compilación del código base.
-- Análisis de la estructura original de `CalculadorDescuento`.
-- Identificación de condicionales rígidos en el método `calcular()`.
-- Identificación del uso de cadenas de texto para controlar la selección de algoritmos.
-- Identificación de responsabilidades mezcladas dentro de `CalculadorDescuento`.
+- Importación, compilación y análisis del código base.
+- Identificación de condicionales rígidos, cadenas de texto y responsabilidades mezcladas.
 - Construcción de la línea base de pruebas con JUnit 5.
-- Validación de los descuentos originales para cliente frecuente, temporada baja y convenio.
-- Selección del patrón de comportamiento Strategy.
-- Creación de la interfaz `EstrategiaDescuento`.
-- Creación de la estrategia concreta `DescuentoFrecuente`.
-- Creación de la estrategia concreta `DescuentoTemporadaBaja`.
-- Creación de la estrategia concreta `DescuentoConvenio`.
-- Refactorización de `CalculadorDescuento` como contexto del patrón Strategy.
-- Incorporación del método `setEstrategia()` para permitir la sustitución de algoritmos.
-- Eliminación de los condicionales utilizados para seleccionar modalidades de descuento.
-- Eliminación de las cadenas de texto utilizadas para controlar el flujo de cálculo.
-- Delegación del cálculo mediante la interfaz `EstrategiaDescuento`.
-- Incorporación de una validación para impedir la ejecución sin una estrategia configurada.
-- Adaptación de las pruebas unitarias al diseño refactorizado.
-- Validación de regresión de los tres algoritmos originales.
-- Validación de la sustitución dinámica de estrategias.
-- Preparación del sistema para incorporar nuevas políticas de descuento sin modificar las clases existentes.
+- Refactorización del sistema mediante el patrón Strategy.
+- Actualización de las pruebas unitarias y validación de regresión.
+- Verificación de la extensibilidad para incorporar nuevas políticas sin modificar las clases existentes.
