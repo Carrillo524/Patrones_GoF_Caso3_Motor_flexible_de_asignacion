@@ -1,23 +1,18 @@
 public class CalculadorDescuento {
 
-    public double calcular(
-            String tipo,
-            double valorCompra) {
+    private EstrategiaDescuento estrategia;
 
-        if (tipo.equals("FRECUENTE")) {
+    public void setEstrategia(EstrategiaDescuento estrategia) {
+        this.estrategia = estrategia;
+    }
 
-            return valorCompra * 0.10;
-
-        } else if (tipo.equals("TEMPORADA_BAJA")) {
-
-            return valorCompra * 0.15;
-
-        } else if (tipo.equals("CONVENIO")) {
-
-            return valorCompra * 0.20;
-
+    public double calcular(double valorCompra) {
+        if (estrategia == null) {
+            throw new IllegalStateException(
+                    "Debe configurar una estrategia antes de calcular"
+            );
         }
 
-        return 0;
+        return estrategia.calcular(valorCompra);
     }
 }
